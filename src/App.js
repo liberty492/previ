@@ -1,25 +1,36 @@
 import logo from './logo.svg';
+import ReactDOM from 'react-dom'; 
 import './App.css';
+import Hookusestate from './components/Hookusestate';
+import Hookuseeffect from './components/Hookuseeffect';
+import Btrap from './components/Btrap';
+import Fsubmit from './components/Fsubmit';
+import NavBar from './components/NavBar';
+import HooksApi  from './components/HooksApi';
+import allegro from './components/allegro';
+
+import {BrowserRouter as Routings ,Route,Redirect,Switch } from 'react-router-dom';//import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   <Routings>
+    <NavBar/>
+         <Switch>
+              
+
+
+               
+
+             
+               <Route  path="/hooksapi" component={HooksApi}/>
+               <Route  path="/allegro" component={allegro}/>
+               
+             
+         </Switch>
+    
+   </Routings>
+
+    );
 }
 
 export default App;
